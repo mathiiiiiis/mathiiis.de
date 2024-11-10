@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oh I see... - undert/mathiiis.de</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="question-box">
+            <p id="question">Do you really need to leave me?</p>
+            <div class="options">
+                <button id="option1" class="option" tabindex="0">Yes</button>
+                <button id="option2" class="option" tabindex="0">No</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="glitch-text-container" style="display:none;">
+        <div id="glitch-text"></div>
+    </div>
+
+    <audio id="sans-talking" src="/sounds/sans-talking.mp3"></audio>
+    <div id="sad-smiley">:(</div>
+    <img id="undertale-dog" src="/assets/undertale-dog.gif" alt="Undertale Dog">
+
+    <button id="mute-button" class="mute-unmute">Mute Sound</button>
+    <p id="credit-text">Made with <img id="pixel-heart-icon" src="/assets/undertale-heart.png" alt="Pixel Heart"> by Mathis</p>
+
+    <script src="app.js"></script>
+    <audio id="select-sound" src="/sounds/select-sound.mp3"></audio>
+    <audio id="hover-sound" src="/sounds/hover-sound.mp3"></audio>
+    <audio id="background-music" src="/sounds/background-music.mp3"></audio>
+    <audio id="sad-music" src="/sounds/sad-music.mp3"></audio>
+    <audio id="happy-music" src="/sounds/happy-music.mp3"></audio>
+    <audio id="heart-break" src="/sounds/heart-break.mp3"></audio>
+</body>
+</html>
+

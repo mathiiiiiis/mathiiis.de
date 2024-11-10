@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Rater</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <div class="app-content">
+            <div class="left-column animate__animated animate__fadeIn">
+                <h1>PC Rater</h1>
+                <p class="subtitle">Rate your PC components and get personalized recommendations!</p>
+                <form id="pc-form">
+                    <div class="input-group">
+                        <label for="cpu">CPU</label>
+                        <div class="autocomplete">
+                            <input type="text" id="cpu" required placeholder="e.g., Intel Core i7-10700K">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="ram">RAM</label>
+                        <div class="autocomplete">
+                            <input type="text" id="ram" required placeholder="e.g., Corsair Vengeance 16GB DDR4">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="storage">Storage</label>
+                        <div class="autocomplete">
+                            <input type="text" id="storage" required placeholder="e.g., Samsung 970 EVO Plus 1TB">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="gpu">GPU</label>
+                        <div class="autocomplete">
+                            <input type="text" id="gpu" required placeholder="e.g., NVIDIA GeForce RTX 3070">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Rate My PC</button>
+                </form>
+            </div>
+            <div class="right-column animate__animated animate__fadeIn">
+                <div id="result" class="hidden">
+                    <h2>PC Rating</h2>
+                    <p id="rating" class="overall-rating"></p>
+                    <div id="recommendations"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

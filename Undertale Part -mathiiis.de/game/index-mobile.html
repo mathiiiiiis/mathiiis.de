@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>UNDERT Mobile - Alpha 0.1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mobile-styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="main-menu" class="screen">
+            <h1>UNDERT</h1>
+            <h4>Version 0.1</h4>
+            <div class="menu-options">
+                <button class="menu-btn" id="start-btn">Start Game</button>
+                <button class="menu-btn" id="settings-btn">Settings</button>
+                <button class="menu-btn" id="changelog-btn">Changelog</button>
+            </div>
+            <div id="credit-text">
+                Made with <img src="/assets/undertale-heart.png" id="pixel-heart-icon" alt="Pixel Heart"> by Mathis
+            </div>
+        </div>
+
+        <div id="settings-menu" class="screen hidden">
+            <h2>Settings</h2>
+            <div class="settings-option">
+                <label for="music-volume">Music Volume:</label>
+                <input type="range" id="music-volume" min="0" max="1" step="0.1">
+            </div>
+            <div class="settings-option">
+                <label for="sfx-volume">SFX Volume:</label>
+                <input type="range" id="sfx-volume" min="0" max="1" step="0.1">
+            </div>
+            <button class="menu-btn" id="back-btn">Back</button>
+        </div>
+
+        <div id="changelog" class="screen hidden">
+            <h2>Changelog-Mobile</h2>
+            <div class="changelog-content">
+                <div class="changelog-entry">
+                    <h3>08/16/2024 - Alpha 0.1 release</h3>
+                    <p>Release of Mobile Version 0.1 with:</p>
+                    <ul>
+                        <li>Release<br>- The Mobile Version 0.1 launched on this day.</li>
+                        <li>Settings<br>- Added Settings (not functional yet)</li>
+                        <li>Sounds<br>- Added all Sounds and Music</li>
+                        <li>Movement<br>- Added basic Controls</li>
+                    </ul>
+                    <p>I hope you like the first look of the Game</p>
+                    <p><em>Sincerely, Mathis</em></p>
+                </div>
+            </div>
+            <button class="menu-btn" id="changelog-back-btn">Back</button>
+        </div>
+
+        <div id="game-area" class="screen hidden">
+            <div id="player"></div>
+            <div id="controls">
+                <button id="up-btn" class="control-btn">↑</button>
+                <button id="left-btn" class="control-btn">←</button>
+                <button id="right-btn" class="control-btn">→</button>
+                <button id="down-btn" class="control-btn">↓</button>
+            </div>
+        </div>
+
+        <div id="dialog-box" class="hidden">
+            <p id="dialog-text"></p>
+        </div>
+    </div>
+
+    <audio id="select-sound" src="/sounds/select-sound.mp3"></audio>
+    <audio id="hover-sound" src="/sounds/hover-sound.mp3"></audio>
+    <audio id="background-music" src="/undert/sounds/ruins-sound.mp3" loop></audio>
+    <audio id="menu-music" src="/sounds/menu-music.mp3" loop></audio>
+    <audio id="footstep-sound" src="/sounds/footstep.wav"></audio>
+    <audio id="text-box-sound" src="/sounds/text-box.mp3"></audio>
+    <audio id="text-speak-sound" src="/sounds/sans-talking.mp3"></audio>
+    <audio id="settings-music" src="/sounds/settings-sound.mp3"></audio>
+
+    <script src="mobile-app.js"></script>
+</body>
+</html>
