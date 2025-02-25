@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - mathiiis.de</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="assets/styles/styles.css?v=<?php echo time(); ?>">
+	<link rel="icon" type="image/png" href="pictures/logo.png">
+    <link rel="shortcut icon" type="image/png" href="pictures/logo.png">
+</head>
+<body>
+    <audio id="hoverSound" preload="auto">
+        <source src="assets/sounds/hover.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="clickSound" preload="auto">
+        <source src="assets/sounds/click.mp3" type="audio/mpeg">
+    </audio>
+
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mute-toggle" aria-label="Mute Sounds">
+                    <i class="fas fa-volume-up"></i>
+                </button>                
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div data-aos="fade-up">
+                <h1>Hello, I'm Mathis! <span class="waving-emoji">👋</span></h1>
+                <p>A 15-year-old developer from Germany</p>
+                <button class="donate-btn" onclick="openModal('donationModal')">Support My Work ❤️</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 13l5 5 5-5"/>
+                <path d="M7 6l5 5 5-5"/>
+            </svg>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="profile-container" data-aos="fade-up">
+                <img id="discordProfile" class="profile-picture" alt="Profile">
+            </div>
+            <div data-aos="fade-up">
+                <p>I'm a young programmer who was thrown to the ground at birth. When I'm not coding, I'm thinking about how to fix that bug on line 46 (it's empty). I started programming when I was 13 (never pulled girls with that…). Before I forget, I plan to do my Abitur in electrical engineering. That's all about me lol.</p>
+                <div class="skills">
+                    <div class="skill-card">
+                        <div class="skill-icon">💻</div>
+                        <div class="skill-name">Web Development</div>
+                        <div class="skill-description">HTML, CSS, JavaScript</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🔒</div>
+                        <div class="skill-name">Database & Security</div>
+                        <div class="skill-description">MySQL and others</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">✏️</div>
+                        <div class="skill-name">Currently learning..</div>
+                        <div class="skill-description">C++, Java and Symfony</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+            <div class="projects">
+                <div class="project-card" data-aos="fade-up" onclick="openModal('project1')">
+                    <div class="project-icon">💿</div>
+                    <div class="project-info">
+                        <h3>matSFX</h3>
+                        <p>Its an ad-free and open-soruce alternative to Spotify.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" onclick="openModal('project2')">
+                    <div class="project-icon">🖥</div>
+                    <div class="project-info">
+                        <h3>PC Rater</h3>
+                        <p>Type in your Computers Components and see how good your build is.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" onclick="openModal('project3')">
+                    <div class="project-icon">🎹</div>
+                    <div class="project-info">
+                        <h3>VR Piano</h3>
+                        <p>VR Piano is a Virtual Web-Based Piano.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" onclick="openModal('project4')">
+                    <div class="project-icon">🕹️</div>
+                    <div class="project-info">
+                        <h3>Gamch</h3>
+                        <p>A game library platform for discovering and sharing games.</p>
+                    </div>
+                </div>
+				<div class="project-card" data-aos="fade-up" onclick="openModal('project5')">
+                    <div class="project-icon">⛅</div>
+                    <div class="project-info">
+                        <h3>Weather Now</h3>
+                        <p>A Weather App using the Open Meteo API</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<section id="contact">
+		<div class="container">
+			<h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+			<div class="contact-container" data-aos="fade-up" data-aos-delay="100">
+				<div class="contact-card">
+					<div class="contact-icon">
+						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+							<polyline points="22,6 12,13 2,6"></polyline>
+						</svg>
+					</div>
+					<div class="contact-info">
+						<h3>Email Me</h3>
+						<p><a href="mailto:mathis@mathiiis.de" class="contact-link">mathis@mathiiis.de</a></p>
+					</div>
+				</div>
+				<div class="contact-card">
+					<div class="contact-icon">
+						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+						</svg>
+					</div>
+					<div class="contact-info">
+						<h3>Discord</h3>
+						<p><a href="https://discord.com/users/1263479329824702539" class="contact-link" target="_blank">@mathhis</a></p>
+					</div>
+				</div>
+				<div class="contact-card">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <path d="M2 12h20"></path>
+                          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+					<div class="contact-info">
+						<h3>Social Media</h3>
+						<div class="social-links">
+							<a href="https://github.com/mathiiiiiis" target="_blank" class="social-link">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+								</svg>
+							</a>
+							<a href="https://twitter.com/mathiiis_dev" target="_blank" class="social-link">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <div id="project1" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('project1')">&times;</span>
+            <h2>matSFX</h2>
+            <p>matSFX is an ad-free and open-source alternative to Spotify and Amazon Music. Its currently in its Alpha State and gets updates on regular bases.</p>
+            <div class="modal-images">
+                <img src="assets/pictures/screenshots/matsfx/image1.webp" alt="matSFX Screenshot 1">
+                <img src="assets/pictures/screenshots/matsfx/image2.webp" alt="matSFX Screenshot 2">
+            </div>
+            <iframe src="error.html" title="matSFX Preview"></iframe>
+            <a href="https://alpha.matsfx.com" target="_blank" class="link-card">
+                <svg width="24px" height="24px" viewBox="0 0 429.151 429.151">
+                    <g><path d="M214.575,197.917c9.208,0,16.665,7.464,16.665,16.665c0,9.201-7.457,16.667-16.665,16.667   c-9.203,0-16.667-7.466-16.667-16.667C197.908,205.381,205.372,197.917,214.575,197.917z"/><path d="M214.575,0C96.067,0,0.001,96.072,0.001,214.582c0,118.508,96.066,214.569,214.574,214.569   c118.514,0,214.576-96.062,214.576-214.569C429.15,96.072,333.089,0,214.575,0z M63.034,135.922c-1.753,0-3.513-0.487-5.092-1.499   c-4.346-2.817-5.58-8.636-2.767-12.968c24.532-37.826,61.48-66.563,104.041-80.9c4.907-1.671,10.227,0.982,11.874,5.889   c1.649,4.907-0.988,10.231-5.895,11.872c-38.549,12.998-72.047,39.037-94.289,73.336C69.117,134.423,66.107,135.922,63.034,135.922   z M92.212,160.918c-1.703,0-3.424-0.463-4.967-1.431c-4.391-2.747-5.725-8.524-2.988-12.92   c21.827-34.941,55.463-60.761,94.726-72.679c4.915-1.499,10.189,1.288,11.688,6.241c1.499,4.951-1.294,10.195-6.248,11.694   c-34.913,10.6-64.846,33.564-84.258,64.674C98.392,159.347,95.328,160.918,92.212,160.918z M132.513,171.728   c-1.812,2.683-4.763,4.12-7.769,4.12c-1.813,0-3.635-0.501-5.244-1.593c-4.294-2.909-5.416-8.736-2.522-13.014   c16.464-24.367,40.815-42.921,68.561-52.271c4.937-1.639,10.227,0.998,11.874,5.905c1.649,4.905-0.988,10.229-5.895,11.886   C167.638,134.768,146.685,150.753,132.513,171.728z M152.079,214.582c0-34.508,27.978-62.496,62.496-62.496   c34.522,0,62.498,27.98,62.498,62.496c0,34.517-27.991,62.496-62.498,62.496C180.065,277.078,152.079,249.098,152.079,214.582z    M214.731,318.522c-0.95-5.089,2.397-9.994,7.488-10.943c29.659-5.607,56.545-23.14,73.757-48.154   c2.93-4.264,8.765-5.346,13.032-2.416c4.271,2.945,5.346,8.772,2.408,13.048c-19.993,29.042-51.234,49.432-85.738,55.937   c-0.585,0.111-1.158,0.152-1.76,0.152C219.518,326.153,215.579,323.031,214.731,318.522z M221.514,353.291   c-0.966-5.069,2.376-9.975,7.458-10.956c37.942-7.205,71.384-28.488,94.15-59.951c3.029-4.184,8.885-5.134,13.096-2.1   c4.185,3.037,5.122,8.893,2.101,13.096c-25.6,35.357-63.186,59.29-105.849,67.369c-0.593,0.124-1.174,0.168-1.759,0.168   C226.299,360.933,222.363,357.807,221.514,353.291z M369.275,309.89c-30.116,47.104-78.81,79.672-133.611,89.346   c-0.545,0.093-1.103,0.137-1.64,0.137c-4.464,0-8.419-3.202-9.229-7.743c-0.89-5.089,2.505-9.966,7.602-10.855   c49.648-8.769,93.778-38.283,121.085-80.986c2.789-4.372,8.6-5.626,12.939-2.854C370.794,299.727,372.064,305.514,369.275,309.89z"/></g>
+                </svg>
+                alpha.matsfx.com
+            </a>
+        </div>
+    </div>
+
+    <div id="project2" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('project2')">&times;</span>
+            <h2>PC Rater</h2>
+            <p>Put it your Computers Components and see how good your build is. It was one of my first ever more complex Projects so yeah..</p>
+            <div class="modal-images">
+                <img src="assets/pictures/screenshots/pcrater/image1.webp" alt="PC Rater Screenshot 1">
+                <img src="assets/pictures/screenshots/pcrater/image2.webp" alt="Pc Rater Screenshot 2">
+            </div>
+            <iframe src="https://mathiiis.de/pcrater/" title="PC Rater Preview"></iframe>
+            <a href="https://mathiiis.de/pcrater/" target="_blank" class="link-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M2 12h20"></path>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                mathiiis.de/pcrater/
+            </a>
+        </div>
+    </div>
+
+    <div id="project3" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('project3')">&times;</span>
+            <h2>VR Piano</h2>
+            <p>Ever wanted to play Piano in the web? Then this is the right one. You can choose from tons of diferent Template Songs to listen too, or even play your own.</p>
+            <div class="modal-images">
+                <img src="assets/pictures/screenshots/piano/image1.webp" alt="VR Piano Screenshot 1">
+                <img src="assets/pictures/screenshots/piano/image2.webp" alt="VR Piano Screenshot 2">
+            </div>
+            <iframe src="https://mathiiis.de/piano/" title="VR Piano Preview"></iframe>
+            <a href="https://mathiiis.de/piano/" target="_blank" class="link-card">
+                <svg width="24px" height="24px" viewBox="0 0 429.151 429.151">
+                    <g><path d="M214.575,197.917c9.208,0,16.665,7.464,16.665,16.665c0,9.201-7.457,16.667-16.665,16.667   c-9.203,0-16.667-7.466-16.667-16.667C197.908,205.381,205.372,197.917,214.575,197.917z"/><path d="M214.575,0C96.067,0,0.001,96.072,0.001,214.582c0,118.508,96.066,214.569,214.574,214.569   c118.514,0,214.576-96.062,214.576-214.569C429.15,96.072,333.089,0,214.575,0z M63.034,135.922c-1.753,0-3.513-0.487-5.092-1.499   c-4.346-2.817-5.58-8.636-2.767-12.968c24.532-37.826,61.48-66.563,104.041-80.9c4.907-1.671,10.227,0.982,11.874,5.889   c1.649,4.907-0.988,10.231-5.895,11.872c-38.549,12.998-72.047,39.037-94.289,73.336C69.117,134.423,66.107,135.922,63.034,135.922   z M92.212,160.918c-1.703,0-3.424-0.463-4.967-1.431c-4.391-2.747-5.725-8.524-2.988-12.92   c21.827-34.941,55.463-60.761,94.726-72.679c4.915-1.499,10.189,1.288,11.688,6.241c1.499,4.951-1.294,10.195-6.248,11.694   c-34.913,10.6-64.846,33.564-84.258,64.674C98.392,159.347,95.328,160.918,92.212,160.918z M132.513,171.728   c-1.812,2.683-4.763,4.12-7.769,4.12c-1.813,0-3.635-0.501-5.244-1.593c-4.294-2.909-5.416-8.736-2.522-13.014   c16.464-24.367,40.815-42.921,68.561-52.271c4.937-1.639,10.227,0.998,11.874,5.905c1.649,4.905-0.988,10.229-5.895,11.886   C167.638,134.768,146.685,150.753,132.513,171.728z M152.079,214.582c0-34.508,27.978-62.496,62.496-62.496   c34.522,0,62.498,27.98,62.498,62.496c0,34.517-27.991,62.496-62.498,62.496C180.065,277.078,152.079,249.098,152.079,214.582z    M214.731,318.522c-0.95-5.089,2.397-9.994,7.488-10.943c29.659-5.607,56.545-23.14,73.757-48.154   c2.93-4.264,8.765-5.346,13.032-2.416c4.271,2.945,5.346,8.772,2.408,13.048c-19.993,29.042-51.234,49.432-85.738,55.937   c-0.585,0.111-1.158,0.152-1.76,0.152C219.518,326.153,215.579,323.031,214.731,318.522z M221.514,353.291   c-0.966-5.069,2.376-9.975,7.458-10.956c37.942-7.205,71.384-28.488,94.15-59.951c3.029-4.184,8.885-5.134,13.096-2.1   c4.185,3.037,5.122,8.893,2.101,13.096c-25.6,35.357-63.186,59.29-105.849,67.369c-0.593,0.124-1.174,0.168-1.759,0.168   C226.299,360.933,222.363,357.807,221.514,353.291z M369.275,309.89c-30.116,47.104-78.81,79.672-133.611,89.346   c-0.545,0.093-1.103,0.137-1.64,0.137c-4.464,0-8.419-3.202-9.229-7.743c-0.89-5.089,2.505-9.966,7.602-10.855   c49.648-8.769,93.778-38.283,121.085-80.986c2.789-4.372,8.6-5.626,12.939-2.854C370.794,299.727,372.064,305.514,369.275,309.89z"/></g>
+                </svg>
+                mathiiis.de/piano/
+            </a>            
+        </div>
+    </div>
+
+    <div id="project4" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('project4')">&times;</span>
+            <h2>Gamch</h2>
+            <p>A game library platform for discovering and sharing games.</p>
+            <div class="modal-images">
+                <img src="assets/pictures/screenshots/gamch/image1.webp" alt="Gamch Screenshot 1">
+                <img src="assets/pictures/screenshots/gamch/image2.webp" alt="Gamch Screenshot 2">
+            </div>
+            <iframe src="https://mathiiis.de/gamch/index.php" title="Gamch Preview"></iframe>
+            <a href="https://mathiiis.de/gamch/index.php" target="_blank" class="link-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M2 12h20"></path>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                mathiiis.de/gamch/
+            </a>
+        </div>
+    </div>
+	
+	<div id="project5" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('project5')">&times;</span>
+            <h2>Weather Now</h2>
+            <p>A Weather App using the Open Meteo API. It uses your location to show the current weather an tempature at your place. There is also the ability to search for a Location (not all can be found in the current version of the App)</p>
+            <div class="modal-images">
+                <img src="assets/pictures/screenshots/weather_now/image1.webp" alt="Weather Now Screenshot 1">
+                <img src="assets/pictures/screenshots/weather_now/image2.webp" alt="Weather Now Screenshot 2">
+            </div>
+            <iframe src="https://mathiiis.de/weather" title="Weather Now Preview"></iframe>
+            <a href="https://mathiiis.de/weather" target="_blank" class="link-card">
+                <i class="fas fa-cloud-sun"></i>
+                mathiiis.de/weather
+            </a>                                         
+        </div>
+    </div>
+
+    <div id="donationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('donationModal')">&times;</span>
+            <div class="modal-text">
+                <h2>Support My Work</h2>
+                <p>If you enjoy my projects and want to support my work, consider buying me a coffee! Your support helps me continue creating and maintaining these projects.</p>
+            </div>
+            <div class="iframe-container">
+                <iframe id='kofiframe' src='https://ko-fi.com/mathiiis/?hidefeed=true&widget=true&embed=true&preview=true' title='mathiiis'></iframe>
+            </div>
+        </div>
+    </div>    
+
+    <div class="scroll-to-top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </div>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+    <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/mute_sound.js"></script>
+    <script src="/assets/js/theme_switch.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+	background: #f8f9fa;
+	color: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+}
+
+.container {
+	max-width: 600px;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 3rem;
+	margin-bottom: 10px;
+	color: #dc3545;
+}
+
+p {
+	font-size: 1.2rem;
+	color: #555;
+	margin-bottom: 20px;
+}
+
+.emoji {
+	font-size: 4rem;
+	animation: shake 2s infinite;
+}
+
+@keyframes shake {
+	0%, 100% { transform: rotate(0deg); }
+	25% { transform: rotate(10deg); }
+	50% { transform: rotate(-10deg) translateY(-5px) }
+	75% { transform: rotate(10deg); }
+}
