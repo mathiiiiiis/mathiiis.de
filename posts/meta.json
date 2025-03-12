@@ -1,0 +1,29 @@
+[
+    {
+        "slug": "first_post_post_12_03_2025",
+        "title": "First Post",
+        "date": "2025-03-12",
+        "excerpt": "oh yo whats up you found this place wow.. yeah this is the first post on my blog website. wild right? not much here yet but hey gotta start somewhere. gonna be posting stuff about design, tech, maybe some random thoughts who knows.",
+        "image": "assets/pictures/blog/first_post_post_2025_03_12.png",
+        "tags": ["first", "post", "talk"],
+        "featured": true
+    },
+    {
+        "slug": "minimalist_design_post_12_03_2025",
+        "title": "The Art of Minimalist Design",
+        "date": "2025-03-12",
+        "excerpt": "in a world where everything feels cluttered and overwhelming, minimalist design cuts through the noise. its all about the idea that less is more—keeping only whats essential to make things clean, functional, and easy to use. by stripping away the unnecessary, minimalist design creates simple, purposeful interfaces that look good and just work.",
+        "image": "assets/pictures/blog/minimalist_design_post_12_03_2025.png",
+        "tags": ["design", "minimalism", "ux"],
+        "featured": false
+    },
+    {
+        "slug": "matsfx_post_post_12_02_2025",
+        "title": "matSFX - my own Music Streaming Service",
+        "date": "2025-03-12",
+        "excerpt": "oh yo, you heard about matSFX yet? nah? well, let me tell you about this dope music platform I have been working on. its like Spotify, but no ads, open-source, and its still in alpha so things are gonna keep getting better.",
+        "image": "assets/pictures/blog/matsfx_post_post_12_02_2025.png",
+        "tags": ["music", "streaming", "matSFX"],
+        "featured": false
+    }
+]

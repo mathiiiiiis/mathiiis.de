@@ -40,13 +40,16 @@ document.addEventListener("DOMContentLoaded", updateDiscordProfile);
 
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', e => {
+      const href = link.getAttribute('href');
+
+      if (href && href.startsWith('#')) {
         e.preventDefault();
-        const targetId = link.getAttribute('href') || '#about';
-        document.querySelector(targetId).scrollIntoView({
-            behavior: 'smooth'
+        document.querySelector(href).scrollIntoView({
+          behavior: 'smooth'
         });
+      }
     });
-});
+  });
 
 // Modal functions
 function openModal(modalId) {

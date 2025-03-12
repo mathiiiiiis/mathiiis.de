@@ -7,9 +7,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-	<link rel="stylesheet" href="assets/styles/styles.css?v=<?php echo time(); ?>">
-	<link rel="icon" type="image/png" href="pictures/logo.png">
-    <link rel="shortcut icon" type="image/png" href="pictures/logo.png">
+	<link rel="stylesheet" href="assets/styles/styles.css?v=<?php echo filemtime('assets/styles/styles.css'); ?>">
+	<link rel="icon" type="image/png" href="assets/pictures/logos/mathiiis_logo.png">
+    <link rel="shortcut icon" type="image/png" href="assets/pictures/logos/mathiiis_logo.png">
 </head>
 <body>
     <audio id="hoverSound" preload="auto">
@@ -120,6 +120,13 @@
                         <p>A Weather App using the Open Meteo API</p>
                     </div>
                 </div>
+				<div class="project-card" data-aos="fade-up" onclick="openModal('project6')">
+                    <div class="project-icon">📻</div>
+                    <div class="project-info">
+                        <h3>mathiiis Radio</h3>
+                        <p>A Web-based Radio with Stations from USA, Germany & many more!</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -208,14 +215,9 @@
                 <img src="assets/pictures/screenshots/pcrater/image2.webp" alt="Pc Rater Screenshot 2">
             </div>
             <iframe src="https://mathiiis.de/pcrater/" title="PC Rater Preview"></iframe>
-            <a href="https://mathiiis.de/pcrater/" target="_blank" class="link-card">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M2 12h20"></path>
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                </svg>
-                mathiiis.de/pcrater/
-            </a>
+			<a href="https://mathiiis.de/pcrater/" target="_blank" class="link-card">
+				mathiiis.de/pcrater/
+			</a>
         </div>
     </div>
 
@@ -248,14 +250,9 @@
                 <img src="assets/pictures/screenshots/gamch/image2.webp" alt="Gamch Screenshot 2">
             </div>
             <iframe src="https://mathiiis.de/gamch/index.php" title="Gamch Preview"></iframe>
-            <a href="https://mathiiis.de/gamch/index.php" target="_blank" class="link-card">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M2 12h20"></path>
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                </svg>
-                mathiiis.de/gamch/
-            </a>
+			<a href="https://mathiiis.de/gamch/index.php" target="_blank" class="link-card">
+				mathiiis.de/gamch/
+			</a>
         </div>
     </div>
 	
@@ -275,6 +272,22 @@
             </a>                                         
         </div>
     </div>
+	
+	<div id="project6" class="modal">
+		<div class="modal-content">
+			<span class="close-modal" onclick="closeModal('project6')">&times;</span>
+			<h2>mathiiis Radio</h2>
+			<p>A Web-based Radio with Stations from USA, Germany & many more! You can listen to it from every location, you need an internet connection tho, so not really every location :/</p>
+			<div class="modal-images">
+				<img src="assets/pictures/screenshots/radio/image1.webp" alt="mathiiis Radio Screenshot 1">
+				<img src="assets/pictures/screenshots/radio/image2.webp" alt="mathiiis Radio Screenshot 2">
+			</div>
+			<iframe src="https://mathiiis.de/radio/" title="mathiiis Radio Preview"></iframe>
+			<a href="https://mathiiis.de/radio/" target="_blank" class="link-card">
+				mathiiis.de/radio/
+			</a>
+		</div>
+	</div>
 
     <div id="donationModal" class="modal">
         <div class="modal-content">

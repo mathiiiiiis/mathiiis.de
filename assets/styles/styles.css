@@ -5,7 +5,6 @@
     font-family: system-ui, -apple-system, sans-serif;
 }
 
-/* Dark mode styles */
 .dark body{
     background: #1a1a1a;
     color: #fff;
@@ -15,19 +14,7 @@
     color: white;
 }
 
-.dark .skill-description {
-    background-color: #1a1a1a;
-}
-
 .dark .about-container p {
-    background-color: #1a1a1a;
-}
-
-.dark .project-info {
-    background-color: #2d2d2d;
-}
-
-.dark .contact-info {
     background-color: #1a1a1a;
 }
 
@@ -128,12 +115,13 @@
 }
 
 .dark .donate-btn {
-    background: #FF5F5F;
-    color: #fff;
+    background: #ffffff;
+    color: #000000;
 }
 
 .dark .donate-btn:hover {
     background: #FF4545;
+    color: #ffffff;
 }
 
 .dark .section-title {
@@ -266,7 +254,7 @@ section {
 }
 
 .donate-btn {
-    background: #FF5F5F;
+    background: #000000;
     color: white;
     padding: 10px 20px;
     border-radius: 30px;
@@ -485,15 +473,11 @@ section {
 .close-modal {
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 22px;
     font-size: 30px;
     cursor: pointer;
     color: #000;
     transition: transform 0.3s;
-}
-
-.close-modal:hover {
-    transform: rotate(90deg);
 }
 
 .modal-images {
